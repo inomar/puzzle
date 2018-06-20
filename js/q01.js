@@ -10,7 +10,7 @@ while (true) {
          (i.toString(8) == i.toString(8).reverse())
     ) {
         console.log(i.toString(), i.toString(2), i.toString(8))
-        break
+        break;
     }
     i++
 }
