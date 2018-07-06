@@ -1,9 +1,11 @@
-# n = 20, m = 3
-def cut_of_n(n, m)
-    nodes = [n]
-    persons = node.size > m ? m : node.size
-    nodes.each do |node|
-      node
-      
-    end
+def cutbar(m,n,current)
+  if current >= n
+    0
+  elsif current < m 
+    1 + cutbar(m,n,current*2)
+  else
+    1 + cutbar(m,n,current + m)
+  end
 end
+
+puts cutbar(3,20,1)
