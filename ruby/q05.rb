@@ -12,4 +12,15 @@ def calcurate(num)
     count
 end
 
-puts calcurate(1000)
+def calucurate2(num)
+    coins = [10, 50, 100, 500]
+    cnt = 0
+    (2..15).each do |i|
+        coins.repeated_combination(i).each do |coin_set|
+            cnt += 1 if coin_set.inject(:+) == 1000
+        end
+    end
+    cnt
+end
+
+puts calucurate2(1000)
